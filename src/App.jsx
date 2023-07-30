@@ -5,9 +5,9 @@ import Title from './components/Title'
 
 
 function App() {
-  const [title, setTitle] = useState("Choose title content")
-  const [btn1, setBtn1] = useState("Submit title")
-  const [btn2, setBtn2] = useState("")
+  const [title, setTitle] = useState("Choose description content")
+  const [btn1, setBtn1] = useState("Back")
+  const [btn2, setBtn2] = useState("Submit Description")
 
   let handleClick1 = () =>{
     setTitle("Choose title content")
@@ -24,6 +24,22 @@ function App() {
     setBtn1("No, go back")
     setBtn2("Yes, go ahead")
   }
+
+  let submitButton = () =>{
+    switch (title) {
+        case "Choose title content":  
+            handleClick1;
+            break;
+        case "Choose description content":  
+            handleClick2;
+                break;
+        case "Are you happy now?":  
+            handleClick3;
+                break;
+        default:
+            break;
+    }
+}
   return (
     <>
       <div className="bg-purple-500 py-14">
